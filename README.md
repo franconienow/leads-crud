@@ -1,13 +1,16 @@
 # LEADS CRUD
 
-App fullstack para cadastro e gestão de leads para empresas<br />
+Este aplicativo fullstack permite que empresas cadastrem e gerenciem leads de forma eficiente. A solução oferece uma interface amigável e recursos essencias para ajudar no processo de vendas.<br />
 
-### Technologies
+### Back-end technologies
 
 - Spring Boot
 - Spring Security
 - JWT
-- Angular
+
+### Front-end technologies
+
+- Angular 17
 - Angular Material
 
 #### Log in
