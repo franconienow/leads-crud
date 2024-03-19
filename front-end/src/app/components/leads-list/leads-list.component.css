@@ -1,0 +1,11 @@
+.table-header {
+  background: rgb(83, 83, 83);
+  font-weight: 400;
+}
+
+.mat-column-details,
+.mat-column-edit,
+.mat-column-delete {
+  width: 48px;
+  padding: 0 0.5rem 0 0.5rem;
+}

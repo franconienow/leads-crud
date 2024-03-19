@@ -1,0 +1,25 @@
+section.form {
+  display: flex;
+  align-items: center;
+}
+
+.form-card {
+  max-width: 500px;
+  width: 100%;
+}
+
+.form-card__header {
+  justify-content: center;
+}
+
+.form-card__title {
+  margin-bottom: 1rem;
+}
+
+.login-form__field {
+  width: 100%;
+}
+
+.login-form__submit-btn {
+  width: 100%;
+}

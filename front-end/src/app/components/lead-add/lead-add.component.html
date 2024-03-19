@@ -1,0 +1,41 @@
+<section class="container">
+  <div class="container__header">
+    <span>Adicionar um Lead</span>
+  </div>
+
+  <form [formGroup]="leadForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Primeiro Nome</mat-label>
+      <input matInput id="first-name" formControlName="firstName">
+      <mat-error *ngIf="leadForm.get('firstName')?.invalid">{{getErrorMessage('firstName')}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Último Nome</mat-label>
+      <input matInput id="last-name" formControlName="lastName">
+      <mat-error *ngIf="leadForm.get('lastName')?.invalid">{{getErrorMessage('lastName')}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="email" id="email" formControlName="email">
+      <mat-error *ngIf="leadForm.get('email')?.invalid">{{getErrorMessage('email')}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Telefone</mat-label>
+      <input matInput type="tel" id="phone" formControlName="phone" mask="(00) 0 0000 0000">
+      <mat-error *ngIf="leadForm.get('phone')?.invalid">{{getErrorMessage('phone')}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <mat-select id="status" formControlName="status">
+        <mat-option *ngFor="let status of leadStatusList" value="{{ status }}">{{ status }}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="leadForm.get('status')?.invalid">{{getErrorMessage('status')}}</mat-error>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary" [disabled]="!leadForm.valid">Cadastrar</button>
+  </form>
+</section>

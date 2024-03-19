@@ -1,0 +1,32 @@
+<section class="container">
+  <div>
+    <span>Lead (#{{lead.id}})</span>
+  </div>
+
+  <div class="lead-details">
+    <div class="lead-details__item">
+      <span>Primeiro Nome: </span>
+      <span class="lead-details__value">{{lead.firstName}}</span>
+    </div>
+    <div class="lead-details__item">
+      <span>Último Nome: </span>
+      <span class="lead-details__value">{{lead.lastName}}</span>
+    </div>
+    <div class="lead-details__item">
+      <span>Email: </span>
+      <span class="lead-details__value"><a [href]="'mailto:' + lead.email">{{lead.email}}</a></span>
+    </div>
+    <div class="lead-details__item">
+      <span>Telefone: </span>
+      <span class="lead-details__value"><a [href]="'tel:' + extractPhoneNumber(lead.phone)">{{lead.phone}}</a></span>
+    </div>
+    <div class="lead-details__item">
+      <span>Status: </span>
+      <span class="lead-details__value">{{lead.status}}</span>
+    </div>
+    <div class="lead-details__item">
+      <span>Data de criação: </span>
+      <span class="lead-details__value">{{lead.createdOn | date: 'dd/MM/yyyy - HH:mm'}}</span>
+    </div>
+  </div>
+</section>

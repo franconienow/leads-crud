@@ -1,0 +1,7 @@
+export enum LeadStatus {
+  ABERTO = 'ABERTO',
+  CONVERTIDO = 'CONVERTIDO',
+  PERDIDO = 'PERDIDO',
+  REJEITADO = 'REJEITADO',
+  LOST = 'LOST',
+}

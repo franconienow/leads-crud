@@ -1,0 +1,22 @@
+<section class="form container">
+  <mat-card class="form-card">
+    <mat-card-header class="form-card__header">
+      <mat-card-title class="form-card__title">Log in</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="login-form__field">
+          <mat-label>Email</mat-label>
+          <input matInput id="email" formControlName="email">
+          <mat-error *ngIf="loginForm.get('email')?.invalid">{{getErrorMessage('email')}}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="login-form__field">
+          <mat-label>Senha</mat-label>
+          <input matInput type="password" id="password" formControlName="password">
+          <mat-error *ngIf="loginForm.get('password')?.invalid">{{getErrorMessage('password')}}</mat-error>
+        </mat-form-field>
+        <button type="submit" mat-flat-button color="primary" class="login-form__submit-btn" [disabled]="!loginForm.valid">Log in</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</section>

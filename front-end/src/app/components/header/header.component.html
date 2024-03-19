@@ -1,0 +1,7 @@
+<mat-toolbar class="navbar" color="accent">
+  <span routerLink="/">Leads Crud</span>
+  <div>
+    <app-account-switch *ngIf="accountIsSelected"></app-account-switch>
+    <app-user-logoff-button *ngIf="userIsLoged"></app-user-logoff-button>
+  </div>
+</mat-toolbar>

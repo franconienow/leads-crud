@@ -1,0 +1,11 @@
+.lead-details {
+
+}
+
+.lead-details__item {
+  margin-bottom: 1.25rem;
+}
+
+.lead-details__value {
+  font-weight: bold;
+}
